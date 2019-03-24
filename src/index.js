@@ -11,6 +11,7 @@ const initState = {
 
 export const reducer = (state = initState, action) => {
     console.log(action, state);
+    return state;
 }
 
 const store = createStore(reducer, initState);

@@ -4,6 +4,7 @@ import '../App.css';
 import TaskField from '../components/TaskField';
 import ListItems from '../components/ListItems';
 // import SingleListItem from './components/SingleListItem';
+import {connect} from 'react-redux';
 
 class App extends Component {
   state = {
@@ -51,4 +52,9 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) =>{
+  return {
+    taskCount: state.task
+    }
+}
+export default connect(mapStateToProps)(App);
